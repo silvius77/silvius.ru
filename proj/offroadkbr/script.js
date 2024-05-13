@@ -1,1 +1,0 @@
-window.location.replace("https://projects.web-ar.studio/v2/offroadkbr");
