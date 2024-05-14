@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>OFFROADKBR</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/silvius77/silvius.ru/main/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/silvius77/silvius.ru/main/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://raw.githubusercontent.com/silvius77/silvius.ru/main/static/favicon_32x32.png" sizes="32x32">
-    <link relicon" href="https://raw.githubusercontent.com/silvius77/silvius.ru/main/static/favicon_48x48.png" sizes="48x48">
-
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>OFFROADKBR</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container" style = "position: absolute; width: 100%; height: 100%; left: 0%; top: 0%;">
-      <canvas id="unity-canvas" style = "position: absolute; width: 100%; height: 100%;"></canvas>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -21,9 +17,12 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">offroadKBR_v2</div>
+      </div>
     </div>
-
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -90,15 +89,13 @@
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
 
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
@@ -110,9 +107,9 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-                //fullscreenButton.onclick = () => {
-                //  unityInstance.SetFullscreen(1);
-                //};
+                fullscreenButton.onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
               }).catch((message) => {
                 alert(message);
               });
