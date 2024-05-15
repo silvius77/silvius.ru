@@ -1,0 +1,10 @@
+body{
+    background: linear-gradient(to top, black, 20%, cyan);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1920px;
+}
+.container-fluid{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
