@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--Generated with https://sitemap-xml.ru-->
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
-  <url>
-    <loc>https://www.silvius.ru/</loc>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>https://silvius.ru/personal_policy/</loc>
+  <lastmod>2023-03-16T12:29:43.715Z</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
 </urlset>
