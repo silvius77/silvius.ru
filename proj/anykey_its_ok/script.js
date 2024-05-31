@@ -1,4 +1,3 @@
-console.log('alle');
 text_for_count = document.getElementById("text_for_count");
 
 text_for_count.addEventListener("input", change_form);
