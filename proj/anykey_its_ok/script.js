@@ -48,7 +48,9 @@ function get_tags(full_text){
 
     full_text.forEach(word => {
         let code = word.charCodeAt(0)
-        if (code >= 65 && code <= 90 || code >=97 && code <= 122){
+        if (code >= 65 && code <= 90){
+            //|| code >=97 && code <= 122
+            word = word.replace(/[^a-zа-яё0-9\s]/gi, ' ');
             tags_list.push(word);
         }
     });
